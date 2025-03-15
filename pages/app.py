@@ -46,7 +46,7 @@ st.write("Choose a cipher and perform encryption or decryption.")
 
 # Input fields
 text = st.text_area("Enter your text:")
-cipher_choice = st.selectbox("Choose a cipher:", ["RSA Cipher", "Caesar Cipher", "Vigenere Cipher"]) 
+cipher_choice = st.selectbox("Choose a cipher:", ["Caesar Cipher", "Vigenere Cipher"]) 
 action = st.radio("Action:", ["Encrypt", "Decrypt"])
 
 if cipher_choice == "Caesar Cipher":
