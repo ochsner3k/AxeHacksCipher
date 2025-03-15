@@ -1,5 +1,15 @@
 import streamlit as st
 
+st.markdown(
+    """
+    <style>
+        .stApp {
+            background-color: #DDD8E6;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 #### Caesar Cipher Encrypt & Decrypt
 class caesarCipher:
     alpha = 'abcdefghijklmnopqrstuvwxyz'
@@ -46,7 +56,7 @@ st.write("Choose a cipher and perform encryption or decryption.")
 
 # Input fields
 text = st.text_area("Enter your text:")
-cipher_choice = st.selectbox("Choose a cipher:", ["RSA Cipher", "Caesar Cipher", "Vigenere Cipher"]) 
+cipher_choice = st.selectbox("Choose a cipher:", ["Caesar Cipher", "Vigenere Cipher"]) 
 action = st.radio("Action:", ["Encrypt", "Decrypt"])
 
 if cipher_choice == "Caesar Cipher":
@@ -69,4 +79,3 @@ if st.button("Submit"):
         else:
             result = vigenereCipher.decrypt(text, key)
     st.write(f"**Result:** {result}")
-
