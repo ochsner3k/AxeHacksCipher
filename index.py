@@ -1,4 +1,5 @@
 import streamlit as st
+
 # Set page title and layout
 st.set_page_config(page_title="Home | Encryption App", page_icon="🔐", layout="centered")
 
