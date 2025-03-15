@@ -86,4 +86,3 @@ if st.button("Submit"):
         else:
             result = vigenereCipher.decrypt(text, key)
     st.write(f"**Result:** {result}")
-
