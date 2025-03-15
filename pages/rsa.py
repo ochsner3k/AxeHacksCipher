@@ -1,5 +1,16 @@
 import streamlit as st
 
+st.markdown(
+    """
+    <style>
+        .stApp {
+            background-color: #DDD8E6;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 from cryptography.hazmat.primitives.asymmetric import rsa
 from cryptography.hazmat.primitives import serialization
 
