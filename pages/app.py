@@ -1,4 +1,5 @@
 import streamlit as st
+from io import StringIO
 
 st.markdown(
     """
@@ -53,9 +54,15 @@ class vigenereCipher:
 # Streamlit UI
 st.title("Encryption & Decryption App")
 st.write("Choose a cipher and perform encryption or decryption.")
+st.write("Either upload a .txt file or enter your text in the textbox below")
 
 # Input fields
-text = st.text_area("Enter your text:")
+file = st.file_uploader(label="Text File", type="txt", accept_multiple_files=False, label_visibility="visible")
+if file is not None:
+    file_string = StringIO(file.getvalue().decode('utf-8'))
+    text = st.text_area(label="File Contents: ", value=file_string.read())
+else:
+    text = st.text_area("Enter your text:")
 cipher_choice = st.selectbox("Choose a cipher:", ["Caesar Cipher", "Vigenere Cipher"]) 
 action = st.radio("Action:", ["Encrypt", "Decrypt"])
 
