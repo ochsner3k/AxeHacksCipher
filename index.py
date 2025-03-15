@@ -45,11 +45,10 @@ st.markdown(
 )
 
 # Page content
-st.markdown('<h1 class="main-title">🔐 Encryption & Decryption App</h1>', unsafe_allow_html=True)
+st.markdown('<h1 class="main-title">Welcome to Cipher Hub!</h1>', unsafe_allow_html=True)
 st.markdown('<p class="subtext">Secure your messages with different encryption techniques.</p>', unsafe_allow_html=True)
-st.markdown('<h4> Welcome to Cipher Hub!</h4>', unsafe_allow_html=True)
+st.markdown('<h4> 🔐 Encryption & Decryption App 🔐 </h4>', unsafe_allow_html=True)
 st.markdown('<h6>Explore the power of encryption and the world of secure communication! A cipher is a tool used in cryptography to transform readable data into unreadable data to secure sensitive information. The main reason for using a cipher is to protect data from unauthorized access</h6>', unsafe_allow_html=True)
-
 
 
 # Buttons placed side by side using flexbox
