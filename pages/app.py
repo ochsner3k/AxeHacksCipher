@@ -1,6 +1,16 @@
 import streamlit as st
 from io import StringIO
 
+st.markdown(
+    """
+    <style>
+        .stApp {
+            background-color: #DDD8E6;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 #### Caesar Cipher Encrypt & Decrypt
 class caesarCipher:
     alpha = 'abcdefghijklmnopqrstuvwxyz'
